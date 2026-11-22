@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Internet Court - Mini Judge</title>
+<style>
+body{font-family:sans-serif;background:#0f0f0f;color:white;text-align:center;padding:20px}
+.box{display:flex;gap:12px;justify-content:center}
+.card{background:#1e1e1e;padding:16px;border-radius:12px;width:45%;text-align:left}
+button{background:#00ff88;border:none;padding:15px 30px;font-size:18px;border-radius:10px;cursor:pointer;font-weight:bold}
+#result{margin-top:20px;background:#222;padding:20px;border-radius:12px;display:none}
+</style>
+</head>
+<body>
+<h1>Internet Court x GenLayer</h1>
+<p>Mini Judge Demo - Powered by AgentScore</p>
+<div class="box">
+<div class="card">
+<h3>Alice</h3>
+<p><b>Claim:</b> Budi belum bayar 50 USDC buat desain logo.</p>
+<p><b>AgentScore:</b> 82 / 100</p>
+<p><b>Bukti:</b> Screenshot chat, invoice</p>
+</div>
+<div class="card">
+<h3>Budi</h3>
+<p><b>Claim:</b> Udah gue bayar, ini bukti transfernya.</p>
+<p><b>AgentScore:</b> 78 / 100</p>
+<p><b>Bukti:</b> Tx Hash 0x123...abc</p>
+</div>
+</div>
+<br>
+<button onclick="judge()">Ask Internet Court</button>
+<div id="result">
+<h3>Putusan Court:</h3>
+<p><b>Budi Menang.</b> Bukti transfer valid dan terverifikasi di chain. Alice wajib kirim file final logo dalam 24 jam.</p>
+<p>Decided by GenLayer Intelligent Contract + AgentScore reputation check.</p>
+</div>
+<p style="margin-top:30px;opacity:0.6;font-size:13px">Internet Court | GenLayer | AgentScore</p>
+<script>
+function judge(){
+document.getElementById('result').style.display='block';
+}
+</script>
+</body>
+</html>
